@@ -28,15 +28,7 @@ class _EncryptionDemoState extends State<EncryptionDemo> {
   String? encryptedPassword;
 
   void encryptPassword() {
-    const publicKeyPem = '''-----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApYd2/xoBG/XKISkoM4qj
-o17YAi5+gL19OfLbmAH8XKdCjBFMhH2ginSp6SSX5UDXn7nrzzEBK0wkoZZUD6KX
-iXaALQimu5uXqVdAqYO2xcFt+n1gYOrzlIXy23hcTqPAxEcz1Wk8H8ob6SfDxL7O
-6O7D3emCzdYgDnsViWROSrja4MO2YXFur/hNUAYxFonMo2x0sis90Ic4KcwFlhx8
-FazbffMcMGsV+VpNmRqFBi00eG4GyaC/Q2v07me+tEoVnwnNBdqzEblFIyulAZzC
-JAN1YFAsbcjL459yU31Bx1Gxu2XWuukKCE88D10kzNGYF+4mVkeF8ska5kDQERDL
-dwIDAQAB
------END PUBLIC KEY-----''';
+    const publicKeyPem = '<?xml version=\"1.0\" encoding=\"utf-16\"?>\n<RSAParameters xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n  <Exponent>AQAB</Exponent>\n  <Modulus>rEta+dh45Z+zwU5+mYUfKA6S0lMM0+n3kTZmoXP4+4r8PtIMyhxBgoqmiDv7sdnkqWVNDAvEnHIECJWhunHnbnknOzqlOe3EJaSmLUFeHftGS9RQRb0LJmLzTiTS9utW85xu/GP3k9qggmpUHEI867JGBZzNyUfLbTZdqdXD/7TBKanxYs18PeiYCk5KO9/4MDqJxIoKonpJbtviNViCQgWcqNmwJEBesVBnmOJElhn/TXkq+4i7Kf3xiTXMs453VVv5Bdns2HYctwN9duGNfRSBfPbzNoJ+X4YS4/SG5OlKHZKJ0Mb9fSZd+Br6MyqWG/b3UBS2UFR38xwn82sUcQ==</Modulus>\n</RSAParameters>';
     try {
       final publicKey = RSAEncryption.parsePublicKeyFromPem(publicKeyPem);
       final rsaEncryption = RSAEncryption(publicKey);
@@ -44,6 +36,7 @@ dwIDAQAB
       setState(() {
         encryptedPassword = rsaEncryption.encrypt(_passwordController.text);
       });
+      print(encryptedPassword);
     } catch (e) {
       print(e);
     }

@@ -58,7 +58,7 @@ packages:
     source: hosted
     version: "1.18.0"
   convert:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: convert
       sha256: b30acd5944035672bc15c6b7a8b47d773e41e2f17de064350988c5d02adb1c68
@@ -187,6 +187,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.0"
+  petitparser:
+    dependency: transitive
+    description:
+      name: petitparser
+      sha256: c15605cd28af66339f8eb6fbe0e541bfe2d1b72d5825efc6598f3e0a31b9ad27
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.2"
   pointycastle:
     dependency: "direct main"
     description:
@@ -272,6 +280,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "14.2.1"
+  xml:
+    dependency: "direct main"
+    description:
+      name: xml
+      sha256: b015a8ad1c488f66851d762d3090a21c600e479dc75e68328c52774040cf9226
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.5.0"
 sdks:
   dart: ">=3.4.3 <4.0.0"
   flutter: ">=3.18.0-18.0.pre.54"

@@ -16,6 +16,8 @@ dependencies:
     sdk: flutter
   encrypt: ^5.0.1
   pointycastle: ^3.4.2
+  xml: ^6.5.0
+  convert: ^3.1.1
 
 
   # The following adds the Cupertino Icons font to your application.
